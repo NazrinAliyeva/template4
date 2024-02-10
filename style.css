@@ -12,13 +12,65 @@
     color: white;
     padding: 43px 100px;
 }
+.sidebar{
+    display: none;
+}
+.sidebar__btn{
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.side__menu{
+    position: fixed;
+    transform: translateY(-100%);
+    transition: 300ms all ease-in-out;
+    top: 0;
+    right: 0;
+    background-color: #337A5B;
+    height: 100%;
+    width: 100%;
+    padding: 2rem 1rem;
+    visibility: visible;
+}
+.active{
+    transform: translateY(0);
+    transition: 300ms all ease-in-out;
+    visibility: visible;
+}
+.side__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.close__btn{
+    color: #fff;
+    font-size: 24px;
+}
+.side{
+    color: #fff;
+    padding: 8px 0;
+    visibility: visible;
+}
+@media (max-width : 600px){
+ .nav-wrapper{
+        display:none;
+    }
+    .nav-item{
+        padding: 8px 0;
+    }
+.sidebar{
+        display: flex;
+    
+    }
+}
 .nav-wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
-.active{
+.active-page{
     border-bottom: 1px solid #fff;
 }
 .container-header-hero{
@@ -152,6 +204,16 @@ justify-content: space-between;}
 .card-img{
     width: 300px;
 }
+.card{
+    position: relative;
+}
+.heart-icon{
+    position: absolute;
+    z-index: 1;
+    height: 29px;
+    right: 40px;
+    top: 20px;
+}
 .card-info-wrapper{
     width: 300px;
 }
@@ -248,8 +310,12 @@ justify-content: space-between;}
         background-size: cover;
         background-repeat: no-repeat;
         height: 200px;
+        color: #fff;
     }
     .item{
+        color: #fff;
+backdrop-filter:blur(3px);
+outline: none;
         border: 1px solid #fff;
         width: 250px;
         height: 30px;
@@ -279,7 +345,38 @@ justify-content: space-between;}
     text-align: center;
     background: #000;
 }
+.blog{
+    width: 300px;
+}
+.blog-img{
+    width: 300px;
+height: 300px;
+}
+.blog-info-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.blog-wrapper{
+    display: flex;
+    gap: 30px;  
+    justify-content:space-between;
+padding: 20px 60px;
+}
 @media (max-width : 600px){
+    .blog-info-wrapper{
+        display: flex;
+       
+        align-items: center;
+        gap: 10px;
+    }
+    .blog-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;  
+        justify-content:space-between;
+    padding: 20px 10px;
+    }
     .big-image{
         height: 300px;
     }
